@@ -7,6 +7,7 @@ export default function (state = {}, action) {
         //сделали объект вместо массива, где свойства являются id а значения - объекты
         //в таком случае значения-объекты с объетка можно получать по id (как индексатор в C#)
         //posts[id]
+        console.log('reducer doing');
             return _.mapKeys(action.payload.data, 'id');
         case FETCH_POST:
             /*const post = action.payload.data;
