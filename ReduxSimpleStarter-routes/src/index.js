@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 import PostIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
+import PostsEditMaterialUI from './components/posts_edit_materialUI';
 import PostsNewMaterialUI from './components/posts_new_materialUI';
 import PostsShow from './components/posts_show';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Switch>
             <Route path="/posts/new" component={PostsNew} />
             <Route path="/posts/newMUI" component={PostsNewMaterialUI} />
+            <Route path="/posts/edit/:id" component={PostsEditMaterialUI} />
             <Route path="/posts/:id" component={PostsShow} />
             <Route path="/" component={PostIndex} />
           </Switch>

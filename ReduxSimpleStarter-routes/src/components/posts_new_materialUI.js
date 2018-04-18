@@ -155,9 +155,7 @@ const selector = formValueSelector('PostsNewFormMaterialUI');
 export default reduxForm({
   validate,
   form: 'PostsNewFormMaterialUI'
-})(
-  connect(getFormState, { createPost })(PostsNewMaterialUI)
-);
+})(connect(getFormState, { createPost })(PostsNewMaterialUI));
 
 
 function getFormState(state) {
