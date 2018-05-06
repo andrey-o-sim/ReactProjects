@@ -10,6 +10,7 @@ import PostsEditMaterialUI from './components/posts_edit_materialUI';
 import PostsNewMaterialUI from './components/posts_new_materialUI';
 import PostsShow from './components/posts_show';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import DualListBox from './components/DualListBoxPage';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -22,6 +23,7 @@ ReactDOM.render(
       <BrowserRouter>
         <div>
           <Switch>
+            <Route path="/DualListBoxPage" component={DualListBox} />
             <Route path="/posts/new" component={PostsNew} />
             <Route path="/posts/newMUI" component={PostsNewMaterialUI} />
             <Route path="/posts/edit/:id" component={PostsEditMaterialUI} />
